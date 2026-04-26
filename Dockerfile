@@ -15,7 +15,7 @@
 # pick version# From https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
 FROM phusion/baseimage:bionic-1.0.0
 
-LABEL maintainer="Dominic Cerquetti binary1230+maintainer@gmail.com"
+LABEL maintainer="PDino"
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -57,8 +57,8 @@ RUN apt-get update \
                xvfb \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# https://github.com/mcallegari/qlcplus/releases/tag/QLC+_4.12.3
-ARG QLC_VERSION=4.12.3
+# https://github.com/mcallegari/qlcplus/releases/tag/QLC+_5.2.1
+ARG QLC_VERSION=5.2.1
 
 ADD https://www.qlcplus.org/downloads/${QLC_VERSION}/qlcplus_${QLC_VERSION}_amd64.deb /opt/qlcplus.deb
 
